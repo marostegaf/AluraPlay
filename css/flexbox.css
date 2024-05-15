@@ -1,0 +1,180 @@
+/* HEADER */
+.cabecalho__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+}
+
+.cabecalho__pesquisar__item {
+    display: none;
+}
+
+.superior__secao__container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    white-space: nowrap;
+    overflow-x: scroll;
+}
+
+/* MENU */
+.menu__container {
+    position: fixed;
+    bottom: 0%;
+    height: 74px;
+    width: 100%;
+}
+
+.menu__lista {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 15px;
+}
+
+.menu__lista li {
+    align-self: center;
+}
+
+.menu__lista:nth-child(2),
+.menu__lista:nth-child(3),
+.menu__lista:nth-child(4) {
+    display: none;
+}
+
+.menu__itens {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.videos__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.videos__item {
+    height: 303px;
+    width: 280px;
+    flex-grow: 1;
+}
+
+/* FOOTER */
+.rodape__container {
+    display: flex;
+    /* flex-direction: column;
+    flex-wrap: wrap; */
+    flex-flow: column wrap;
+}
+
+.superior__secao__container::-webkit-scrollbar {
+    height: 10px;
+}
+  
+.superior__secao__container::-webkit-scrollbar-track {
+    background-color: #ffffff;
+    width: 1px;
+}
+  
+.superior__secao__container::-webkit-scrollbar-thumb {
+    background-color: var(--azul-medio);
+}
+
+@media (min-width: 834px) {
+    /* HEADER */
+    .cabecalho__pesquisar__item {
+        display: block;
+    }
+
+    /* MENU */
+    .menu__container {
+        left: 0;
+        height: auto;
+        width: 74px;
+        top: 143px;
+    }
+    
+    .menu__lista {
+        flex-direction: column;
+        padding: 10px;
+        padding-top: 15px;
+        gap: 33px;
+    }
+
+    /* FOOTER */
+    .rodape__container {
+        justify-content: space-between;
+    }
+
+    .videos__container {
+        padding-left: 100px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .menu__container {
+        width: 200px;
+        overflow-y: scroll;
+    }
+
+    .menu__container::-webkit-scrollbar {
+        width: 10px;
+    }
+      
+    .menu__container::-webkit-scrollbar-track {
+        background-color: var(--azul-escuro);
+    }
+      
+    .menu__container::-webkit-scrollbar-thumb {
+        background-color: var(--azul-medio);
+    }
+
+    .menu__lista {
+        padding: 20px 17px 20px 15px;
+        gap: 20px;
+    }
+
+    .menu__lista:nth-child(2),
+    .menu__lista:nth-child(3),
+    .menu__lista:nth-child(4) {
+        display: flex;
+    }
+
+    .menu__itens {
+        align-items: center;
+        flex-direction: row;
+        gap: 10px;
+        white-space: nowrap;
+    }
+
+    .menu__lista:nth-child(3) {
+        flex-direction: column-reverse;
+    }
+    
+    .jogos {
+        order: 3;
+    }
+
+    .filmes {
+        order: 2;
+    }
+
+    .premium {
+        order: 1;
+    }
+
+    .maispagina {
+        order: 4
+    }
+
+    .videos__container {
+        padding-left: 215px;
+    }
+
+    .rodape__container {
+        padding-left: 120px;
+    }
+}
